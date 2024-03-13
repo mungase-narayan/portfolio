@@ -16,7 +16,7 @@ export const LinkedCard = ({
 }: LinkedCardProps) => (
   <Button
     disabled={disabled}
-    className="size-full bg-transparent hover:bg-transparent relative"
+    className="size-full bg-transparent hover:bg-transparent relative shadow-none border-none outline-none"
   >
     {disabled && (
       <Badge className="absolute top-6 left-8 bg-green-500/15 text-green-500">
@@ -25,7 +25,7 @@ export const LinkedCard = ({
     )}
     <Link
       className={cn(
-        "flex w-full flex-col items-center rounded-xl border bg-transparent p-6 text-card-foreground shadow transition-colors hover:bg-muted/50 sm:p-10",
+        "flex w-full flex-col items-center rounded-xl border bg-transparent p-6 text-card-foreground shadow transition-colors hover:bg-muted/20 sm:p-10",
         className
       )}
       {...props}

@@ -15,39 +15,13 @@ export const MainNav = () => {
         <LogoLink />
         <nav className="flex items-center gap-6 text-sm font-light">
           <Link
-            href="/components"
+            href="/blogs"
             className={cn(
               "transition-colors hover:text-foreground/80",
-              pathname === "/components"
-                ? "text-foreground"
-                : "text-foreground/60"
+              pathname === "/blogs" ? "text-foreground" : "text-foreground/60"
             )}
           >
-            Components
-          </Link>
-
-          <Link
-            href="/components/shadcn"
-            className={cn(
-              "transition-colors hover:text-foreground/80",
-              pathname?.startsWith("/components/shadcn")
-                ? "text-foreground"
-                : "text-foreground/60"
-            )}
-          >
-            Shadcn
-          </Link>
-
-          <Link
-            href="/components/tailwindcss"
-            className={cn(
-              "transition-colors hover:text-foreground/80",
-              pathname?.startsWith("/components/tailwindcss")
-                ? "text-foreground"
-                : "text-foreground/60"
-            )}
-          >
-            Tailwindcss
+            Blogs
           </Link>
         </nav>
       </div>

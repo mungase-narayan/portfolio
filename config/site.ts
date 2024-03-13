@@ -1,8 +1,9 @@
 export const siteConfig = {
-  name: "Kico Design",
+  name: "Rushikesh Mungse",
   siteUrl: "",
   links: {
     github: "",
     twitter: "",
+    linkedin: "#india",
   },
 };

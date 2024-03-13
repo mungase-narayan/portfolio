@@ -14,10 +14,8 @@ export const Button = ({
   return (
     <button
       className={cn(
-        "button relative inline-flex items-center justify-center h-11 transition-colors px-7 ",
-        color
-          ? "text-n-8 hover:text-n-5"
-          : "text-n-1 hover:text-muted-foreground",
+        "text-xs sm:text-sm leading-snug tracking-wider font-bold relative inline-flex items-center justify-center h-11 transition-colors px-5 sm:px-7 hover:text-muted-foreground",
+
         className
       )}
       {...props}

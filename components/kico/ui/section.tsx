@@ -1,7 +1,6 @@
-// import SectionSvg from "../assets/svg/SectionSvg";
-
 import { SectionBorder } from "@/components/icons/section-border";
 import { cn } from "@/lib/utils";
+import { LandingPageGridEffect } from "../effects/landing-page-grid-effect";
 
 type SectionProps = {
   crosses?: boolean;
@@ -10,7 +9,7 @@ type SectionProps = {
   children: React.ReactNode;
 };
 
-const Section = ({ crosses, children, topBorder }: SectionProps) => {
+export const Section = ({ crosses, children, topBorder }: SectionProps) => {
   return (
     <div className={cn("relative py-10 lg:py-16 xl:py-20")}>
       {children}
@@ -30,5 +29,3 @@ const Section = ({ crosses, children, topBorder }: SectionProps) => {
     </div>
   );
 };
-
-export default Section;

@@ -29,7 +29,11 @@ export const Heading = ({ className, title, text, tag }: HeadingProps) => {
         className
       )}
     >
-      {tag && <TagLine className="mb-4 md:justify-center">{tag}</TagLine>}
+      {tag && (
+        <TagLine className="mb-4 md:justify-center text-xs sm:text-md">
+          {tag}
+        </TagLine>
+      )}
       {title && <h2 className="h2">{title}</h2>}
       {text && <p className="body-2 mt-4 text-muted-foreground">{text}</p>}
     </div>

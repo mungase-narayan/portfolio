@@ -7,7 +7,7 @@ export const BlurEffect = ({
   return (
     <span
       className={cn(
-        "absolute md:top-[30%] md:left-[30%] dark:bg-active size-[300px] blur-[150px]",
+        "absolute md:top-[50%] md:left-[50%] -translate-x-1/2 -translate-y-1/2 dark:bg-active size-[200px] blur-[200px]",
         className
       )}
       {...props}
