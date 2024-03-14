@@ -4,6 +4,7 @@ export const siteConfig = {
   links: {
     github: "",
     twitter: "",
-    linkedin: "#india",
+    linkedin: "",
+    leetcode: "",
   },
 };

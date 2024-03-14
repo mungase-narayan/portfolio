@@ -8,6 +8,7 @@ const config = {
     "./components/**/*.{ts,tsx}",
     "./components/**/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./constants/*.{ts.tsx}",
   ],
   theme: {
     container: {
@@ -149,6 +150,10 @@ const config = {
         },
         ".button": {
           "@apply text-xs font-bold tracking-wider": {},
+        },
+        ".glass-effect": {
+          "@apply backdrop-blur rounded-2xl bg-foreground/95 supports-[backdrop-filter]:bg-foreground/5 border border-foreground/20 p-5":
+            {},
         },
       });
       addUtilities({

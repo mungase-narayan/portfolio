@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 
-import { PlusIcon } from "@radix-ui/react-icons";
 import { cn } from "@/lib/utils";
 
 export const Gradient = () => {

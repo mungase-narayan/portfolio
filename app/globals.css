@@ -186,3 +186,19 @@ code[data-line-numbers-max-digits="3"] > .line::before {
 .link {
   @apply text-blue-600 hover:text-blue-700;
 }
+
+.text-gradient {
+  background: radial-gradient(
+    64.18% 64.18% at 71.16% 35.69%,
+    #e8d8fb 0.89%,
+    #d2b4f8 17.23%,
+    #c49ef2 42.04%,
+    #ad7ee7 55.12%,
+    #8347cb 7171.54%,
+    #682bb3 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}

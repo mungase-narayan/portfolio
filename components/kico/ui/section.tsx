@@ -1,6 +1,5 @@
 import { SectionBorder } from "@/components/icons/section-border";
 import { cn } from "@/lib/utils";
-import { LandingPageGridEffect } from "../effects/landing-page-grid-effect";
 
 type SectionProps = {
   crosses?: boolean;
@@ -11,7 +10,9 @@ type SectionProps = {
 
 export const Section = ({ crosses, children, topBorder }: SectionProps) => {
   return (
-    <div className={cn("relative py-10 lg:py-16 xl:py-20")}>
+    <div
+      className={cn("relative py-10 lg:py-16 xl:py-20 border-b md:border-none")}
+    >
       {children}
 
       <div className="hidden absolute top-0 left-5 w-0.25 h-full bg-stroke pointer-events-none md:block lg:left-7.5 xl:left-10" />

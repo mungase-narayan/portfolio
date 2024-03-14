@@ -11,7 +11,7 @@ export const MobileIcon = ({
       width="800px"
       height="800px"
       viewBox="0 0 210 256"
-      enable-background="new 0 0 210 256"
+      enableBackground="new 0 0 210 256"
       xmlSpace="preserve"
       {...props}
     >

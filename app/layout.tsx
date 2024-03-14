@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { fontMono } from "@/lib/fonts";
 import "./globals.css";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import ThemeProvider from "@/components/theme-provider";
