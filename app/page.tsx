@@ -47,7 +47,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="relative md:flex items-center justify-center flex-col md:p-10 border rounded-2xl">
+            <div className="relative md:flex items-center justify-center flex-col p-10 border rounded-2xl">
               <BlurEffect />
 
               <Heading
