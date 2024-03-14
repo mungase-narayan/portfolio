@@ -199,9 +199,13 @@ const Home = () => {
         </div>
       </Section>
 
-      {/* <Section crosses topBorder>
+      <Section crosses topBorder>
         <div className="container sm:w-[90%] mx-auto">
-          <Heading title="Quick and beautiful web design" underline />
+          <Heading
+            title="Quick and beautiful web design"
+            tag="my strategy"
+            underline
+          />
 
           <div className="flex flex-wrap gap-12 items-center justify-center">
             <div className="max-w-[350px] glass-effect">
@@ -221,8 +225,7 @@ const Home = () => {
 
               <ButtonLink
                 buttonTitle="Learn More"
-                buttonHref="#"
-                className=""
+                buttonHref="https://ui-zeta-nine.vercel.app"
               />
             </div>
 
@@ -242,7 +245,7 @@ const Home = () => {
 
                 <ButtonLink
                   buttonTitle="Documentation"
-                  buttonHref="#"
+                  buttonHref="https://ui-zeta-nine.vercel.app/components"
                   className="mb-8"
                 />
 
@@ -276,7 +279,10 @@ const Home = () => {
                   coding efficiency.
                 </p>
 
-                <ButtonLink buttonTitle="Documentation" buttonHref="#" />
+                <ButtonLink
+                  buttonTitle="Documentation"
+                  buttonHref="https://ui-zeta-nine.vercel.app/"
+                />
               </div>
             </div>
 
@@ -290,7 +296,7 @@ const Home = () => {
 
               <ButtonLink
                 buttonTitle="Components"
-                buttonHref="#"
+                buttonHref="https://ui-zeta-nine.vercel.app/components/tailwindcss/kico-fancy-button"
                 className="mb-8"
               />
 
@@ -305,7 +311,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Section> */}
+      </Section>
     </main>
   );
 };
