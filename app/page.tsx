@@ -19,13 +19,17 @@ import { ButtonLink } from "@/components/kico/ui/button-link";
 
 import { mySkills } from "@/constants";
 import { Stars } from "@/components/icons/starts";
+import { LandingPageGridEffect } from "@/components/kico/effects/landing-page-grid-effect";
+import { UniversAnimation } from "@/components/kico/animations/univers-animation";
 
 const Home = () => {
   return (
     <main className="relative overflow-hidden min-h-screen">
       <Section crosses>
+        <LandingPageGridEffect />
         <div className="container sm:w-[90%] mx-auto">
-          <div className="pb-10 md:pb-0 relative md:p-6">
+          <UniversAnimation />
+          <div className="pb-10 md:pb-0 relative md:p-6 md:mt-10">
             <Heading
               title="Hi, I'am Rushikesh Mungse"
               tag="welcome to my portfolio"
@@ -34,10 +38,10 @@ const Home = () => {
               underline
             />
             <PageActionLinks className="mb-6 lg:mb-10" />
-            <BlurEffect className="dark:bg-blue-400 z-0" />
+            <BlurEffect />
           </div>
 
-          <div className="md:flex items-center flex-col space-y-8 md:flex-row md:space-y-0 gap-8">
+          <div className="md:flex items-center flex-col space-y-8 md:flex-row md:space-y-0 gap-8 pt-20">
             <div className="glass-effect overflow-hidden">
               <Image
                 src={"/assets/leetcode.png"}
@@ -48,7 +52,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="relative md:flex items-center justify-center flex-col">
+            <div className="relative md:flex items-center justify-center flex-col glass-effect border-none p-10">
               <BlurEffect />
 
               <Heading
@@ -75,6 +79,7 @@ const Home = () => {
       <Section crosses topBorder>
         <LightBGAnimation className="absolute left-0" />
         <LightBGAnimation className="absolute right-0" />
+        <BlurEffect />
         <div className="container sm:w-[90%] mx-auto">
           <Heading title="About Me" underline />
 
@@ -120,6 +125,7 @@ const Home = () => {
       <Section crosses topBorder>
         <div className="container md:w-[90%] mx-auto">
           <Heading title="Projects" underline />
+          <BlurEffect />
           <div className="flex items-center justify-center gap-8 pb-20 flex-wrap">
             <ProjectCard
               className="max-w-[600px]"
@@ -177,6 +183,7 @@ const Home = () => {
 
           <Heading title="Skills" underline tag="skills" />
           <div className="flex items-center justify-center flex-wrap gap-6">
+            <BlurEffect />
             {mySkills.map((skill) => (
               <span
                 key={skill.title}
@@ -192,7 +199,7 @@ const Home = () => {
         </div>
       </Section>
 
-      <Section crosses topBorder>
+      {/* <Section crosses topBorder>
         <div className="container sm:w-[90%] mx-auto">
           <Heading title="Quick and beautiful web design" underline />
 
@@ -298,7 +305,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
     </main>
   );
 };

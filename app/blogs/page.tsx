@@ -30,10 +30,6 @@ const Blog = () => {
           </div>
         </div>
       </Section>
-
-      <Section crosses topBorder>
-        <div className="container"></div>
-      </Section>
     </div>
   );
 };
