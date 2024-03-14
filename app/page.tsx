@@ -18,6 +18,7 @@ import { ProjectCard } from "@/components/kico/ui/project-card";
 import { ButtonLink } from "@/components/kico/ui/button-link";
 
 import { mySkills } from "@/constants";
+import { Stars } from "@/components/icons/starts";
 
 const Home = () => {
   return (
@@ -47,7 +48,7 @@ const Home = () => {
               />
             </div>
 
-            <div className="relative md:flex items-center justify-center flex-col p-10 border rounded-2xl">
+            <div className="relative md:flex items-center justify-center flex-col">
               <BlurEffect />
 
               <Heading
@@ -161,7 +162,20 @@ const Home = () => {
 
       <Section crosses topBorder>
         <div className="container md:w-[90%] mx-auto">
-          <Heading title="Skills" underline />
+          <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
+            <Image
+              src={"/assets/gradient-sphere.png"}
+              className="relative z-1"
+              width={255}
+              height={255}
+              alt="Sphere"
+            />
+            <div className="absolute top-1/2 left-1/2 w-[60rem] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+              <Stars />
+            </div>
+          </div>
+
+          <Heading title="Skills" underline tag="skills" />
           <div className="flex items-center justify-center flex-wrap gap-6">
             {mySkills.map((skill) => (
               <span
