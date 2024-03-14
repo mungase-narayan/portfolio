@@ -16,7 +16,6 @@ import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { ProjectCard } from "@/components/kico/ui/project-card";
 import { ButtonLink } from "@/components/kico/ui/button-link";
-import LineAnimation from "@/components/kico/animations/line-animation";
 
 import { mySkills } from "@/constants";
 
@@ -48,13 +47,8 @@ const Home = () => {
               />
             </div>
 
-            <div className="relative md:flex items-center justify-center flex-col md:p-10">
+            <div className="relative md:flex items-center justify-center flex-col md:p-10 border rounded-2xl">
               <BlurEffect />
-              <LineAnimation
-                lines={["bottom", "left", "top", "right"]}
-                linePosition={10}
-                className="hidden md:block"
-              />
 
               <Heading
                 tag="CP"

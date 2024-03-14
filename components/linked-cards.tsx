@@ -1,11 +1,11 @@
-import LinkedCard from "./ui/linked-card"
+import { LinkedCard } from "@/components/kico/ui/linked-card";
 
 type LinkedCardType = {
-  href: string
-  icon: JSX.Element
-  title: string
-  disabled: boolean
-}
+  href: string;
+  icon: JSX.Element;
+  title: string;
+  disabled: boolean;
+};
 
 const linkedCards: LinkedCardType[] = [
   {
@@ -143,7 +143,7 @@ const linkedCards: LinkedCardType[] = [
     title: "bootstrap",
     disabled: true,
   },
-]
+];
 
 const LinkedCards = () => {
   return (
@@ -161,7 +161,7 @@ const LinkedCards = () => {
         </LinkedCard>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default LinkedCards
+export default LinkedCards;

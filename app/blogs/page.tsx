@@ -20,7 +20,7 @@ const Blog = () => {
             <BlurEffect className="dark:bg-blue-400" />
           </div>
 
-          <div className="grid lg:grid-cols-3 sm:justify-items-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:justify-items-center gap-8">
             {blogCategories.map((category, key) => (
               <LinkedCard href={category.href} key={key}>
                 {category.icon}
