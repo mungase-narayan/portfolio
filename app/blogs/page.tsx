@@ -9,7 +9,6 @@ const Blog = () => {
   return (
     <div className="min-h-screen relative">
       <Section crosses>
-        <LandingPageGridEffect />
         <div className="container md:w-[90%] mx-auto">
           <div className="relative">
             <Heading
@@ -20,9 +19,9 @@ const Blog = () => {
             <BlurEffect className="dark:bg-blue-400" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:justify-items-center gap-8">
+          <div className="z-100 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:justify-items-center gap-8">
             {blogCategories.map((category, key) => (
-              <LinkedCard href={category.href} key={key}>
+              <LinkedCard src={category.href} key={key}>
                 {category.icon}
                 <p className="mt-4">{category.category}</p>
               </LinkedCard>

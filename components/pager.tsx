@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Blogs } from "contentlayer/generated";
+import { Blogs, CppBlogs } from "contentlayer/generated";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@radix-ui/react-icons";
 import { NavItem, NavItemWithChildren } from "@/types/nav";
@@ -9,7 +9,7 @@ import { buttonVariants } from "@/components/ui/button";
 import blogsConfig from "@/config/blog";
 
 interface DocsPagerProps {
-  doc: Blogs;
+  doc: Blogs | CppBlogs;
 }
 
 export function DocsPager({ doc }: DocsPagerProps) {

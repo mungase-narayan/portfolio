@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import { MdOutlineArrowCircleRight } from "react-icons/md";
 
 type ButtonLinkProps = {
@@ -13,18 +14,17 @@ export const ButtonLink = ({
   buttonTitle,
 }: ButtonLinkProps) => {
   return (
-    <a
+    <Link
       href={buttonHref}
       className={cn(
         "group w-fit flex items-center space-x-3 outline-none border border-foreground/50 rounded-lg bg-transparent px-7 py-2 font-thin text-xs tracking-wider text-foreground/90 hover:text-foreground transition-all",
         className
       )}
-      target="_blank"
     >
       <span>{buttonTitle}</span>
       <span className="group-hover:translate-x-1">
         <MdOutlineArrowCircleRight className="size-4" />
       </span>
-    </a>
+    </Link>
   );
 };

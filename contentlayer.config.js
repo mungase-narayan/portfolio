@@ -4,11 +4,13 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
 import { visit } from "unist-util-visit";
 import { makeSource } from "contentlayer/source-files";
+
 import Blogs from "./content/definations/blogs";
+import CppBlogs from "./content/definations/cpp";
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Blogs],
+  documentTypes: [Blogs, CppBlogs],
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

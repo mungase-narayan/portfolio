@@ -4,17 +4,20 @@ import { DevopsIcon } from "@/components/icons/devops";
 import { DatabaseIcon } from "@/components/icons/database";
 import { CodeIcon } from "@/components/icons/code";
 import { MobileIcon } from "@/components/icons/mobile";
+
 import { DiJsBadge, DiMysql, DiReact } from "react-icons/di";
-import { SiTypescript } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { TbBrandNodejs } from "react-icons/tb";
+import { SiTypescript, SiNextdotjs } from "react-icons/si";
+import { TbBrandNodejs, TbBrandCpp } from "react-icons/tb";
 import { FaDocker } from "react-icons/fa";
 import { BiLogoTailwindCss } from "react-icons/bi";
-import { TbBrandCpp } from "react-icons/tb";
 import { IoLogoFirebase } from "react-icons/io5";
 import { DiMongodb } from "react-icons/di";
 import { FaGitAlt } from "react-icons/fa";
-import { FaGit, FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+
+import cppBlogConfig from "@/config/cpp-blogs";
+import { DSABlogConfigsType } from "@/types";
+import jsBlogConfig from "@/config/javascript-blogs";
 
 export const blogCategories = [
   {
@@ -47,7 +50,7 @@ export const blogCategories = [
     icon: <DevopsIcon className="h-10" />,
     href: "/blogs/devops",
   },
-];
+] as const;
 
 export const mySkills = [
   {
@@ -128,4 +131,11 @@ export const mySkills = [
     title: "GitHub",
     icon: <FaGithub className="h-8 w-8 group-hover:scale-110" />,
   },
-];
+] as const;
+
+export const languages = ["cpp", "js", "py"] as const;
+
+export const dsaBlogConfig: DSABlogConfigsType = {
+  cpp: cppBlogConfig,
+  js: jsBlogConfig,
+} as const;

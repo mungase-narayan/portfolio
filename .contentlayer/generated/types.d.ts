@@ -22,6 +22,22 @@ export type Blogs = {
   /** MDX file body */
   body: MDX
   slug: string
+}
+
+export type CppBlogs = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'CppBlogs'
+  title: string
+  status: 'draft' | 'published'
+  description: string
+  toc: boolean
+  breadcrumb: string
+  links?: LinksProperties | undefined
+  /** MDX file body */
+  body: MDX
+  slug: string
 }  
 
 /** Nested types */
@@ -40,8 +56,8 @@ export type LinksProperties = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Blogs
-export type DocumentTypeNames = 'Blogs'
+export type DocumentTypes = Blogs | CppBlogs
+export type DocumentTypeNames = 'Blogs' | 'CppBlogs'
 
 export type NestedTypes = LinksProperties
 export type NestedTypeNames = 'LinksProperties'
@@ -49,6 +65,7 @@ export type NestedTypeNames = 'LinksProperties'
 export type DataExports = {
   allDocuments: DocumentTypes[]
   allBlogs: Blogs[]
+  allCppBlogs: CppBlogs[]
 }
 
 
@@ -69,6 +86,7 @@ declare global {
 
 export type DocumentTypeMap = {
   Blogs: Blogs
+  CppBlogs: CppBlogs
 }
 
 export type NestedTypeMap = {

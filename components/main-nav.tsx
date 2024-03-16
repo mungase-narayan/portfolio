@@ -18,7 +18,9 @@ export const MainNav = () => {
             href="/blogs"
             className={cn(
               "transition-colors hover:text-foreground/80",
-              pathname === "/blogs" ? "text-foreground" : "text-foreground/60"
+              pathname.startsWith("/blogs")
+                ? "text-foreground"
+                : "text-foreground/60"
             )}
           >
             Blogs

@@ -25,6 +25,7 @@ import { UniversAnimation } from "@/components/kico/animations/univers-animation
 const Home = () => {
   return (
     <main className="relative overflow-hidden min-h-screen">
+      {/* hero */}
       <Section crosses>
         <LandingPageGridEffect />
         <div className="container sm:w-[90%] mx-auto">
@@ -76,6 +77,7 @@ const Home = () => {
         </div>
       </Section>
 
+      {/* about  */}
       <Section crosses topBorder>
         <LightBGAnimation className="absolute left-0" />
         <LightBGAnimation className="absolute right-0" />
@@ -122,6 +124,7 @@ const Home = () => {
         </div>
       </Section>
 
+      {/* projects  */}
       <Section crosses topBorder>
         <div className="container md:w-[90%] mx-auto">
           <Heading title="Projects" underline />
@@ -131,7 +134,7 @@ const Home = () => {
               className="max-w-[600px]"
               tag="Jan 2024"
               src="/assets/tv.png"
-              title="Kico ui component Library."
+              title="Kico ui component library."
               description="Beautifully designed components that you can copy and paste into your apps. Build complex components easy and responsive."
               status="inProgress"
               borderGradient
@@ -149,7 +152,7 @@ const Home = () => {
               className="max-w-[600px]"
               tag="Jan 2024"
               src="/assets/tv.png"
-              title="Kico ui component Library."
+              title="Kico ui component library."
               description="Beautifully designed components that you can copy and paste into your apps. Build complex components easy and responsive."
               status="inProgress"
               borderGradient
@@ -166,6 +169,7 @@ const Home = () => {
         </div>
       </Section>
 
+      {/* skills  */}
       <Section crosses topBorder>
         <div className="container md:w-[90%] mx-auto">
           <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
@@ -199,6 +203,7 @@ const Home = () => {
         </div>
       </Section>
 
+      {/* my strategy */}
       <Section crosses topBorder>
         <div className="container sm:w-[90%] mx-auto">
           <Heading

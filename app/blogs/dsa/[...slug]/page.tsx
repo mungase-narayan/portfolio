@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { allBlogs } from "contentlayer/generated";
+import { allCppBlogs } from "contentlayer/generated";
 import type { Metadata, ResolvingMetadata } from "next";
 import { ChevronRightIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
@@ -15,12 +15,13 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 type BlogsParams = {
   params: {
-    slug: string;
+    slug: string[];
   };
 };
 
 const getComponetFromParams = async ({ params }: BlogsParams) => {
-  const blog = allBlogs.find((blog) => blog.slug === `blogs/${params?.slug}`);
+  const slug = params.slug.join("/");
+  const blog = allCppBlogs.find((blog) => blog.slug === slug);
   return blog ? blog : null;
 };
 
@@ -29,16 +30,17 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const blog = await getComponetFromParams({ params });
-  if (!blog) return { title: "Kico ui : tailwindcss components" };
+  if (!blog)
+    return { title: `${params.slug[0]} : ${params.slug.slice(1).join(" ")}` };
   return {
-    title: "Tailwindcss: " + blog.title,
+    title: params.slug[0].toLocaleUpperCase() + " : " + blog.title,
     description: blog?.description,
   };
 }
 
-const BlogsPage = async ({ params }: BlogsParams) => {
+const DsaPage = async ({ params }: BlogsParams) => {
   const blog = await getComponetFromParams({ params });
-  if (!blog) return notFound();
+  if (!blog) return <h1>No blog found!</h1>;
   const toc = await getTableOfContents(blog.body.raw);
 
   return (
@@ -111,4 +113,4 @@ const BlogsPage = async ({ params }: BlogsParams) => {
   );
 };
 
-export default BlogsPage;
+export default DsaPage;

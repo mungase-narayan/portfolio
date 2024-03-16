@@ -20,7 +20,7 @@ const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h1
       className={cn(
-        "relative mt-3 border-t-2 font-heading pt-9 pb-4 scroll-m-20 text-4xl font-bold",
+        "relative mt-3 border-t-2 font-heading pt-9 pb-4 scroll-m-20 text-xl md:text-4xl font-bold",
         className
       )}
       {...props}
@@ -94,7 +94,10 @@ const components = {
   },
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "[&:not(:first-child)]:mt-6 font-thin text-sm leading-snug md:text-md pb-2",
+        className
+      )}
       {...props}
     />
   ),
@@ -109,7 +112,7 @@ const components = {
   ),
   blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <blockquote
-      className={cn("mt-6 border-l-2 pl-6 italic", className)}
+      className={cn("my-6 border-l-2 border-foreground pl-6 italic", className)}
       {...props}
     />
   ),
@@ -154,7 +157,13 @@ const components = {
     />
   ),
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <code className={cn("font-sm", className)} {...props} />
+    <code
+      className={cn(
+        "px-2 border rounded-sm bg-muted text-xs font-bold",
+        className
+      )}
+      {...props}
+    />
   ),
   pre: ({
     className,
