@@ -150,7 +150,7 @@ const LinkedCards = () => {
     <div className="container mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 sm:gap-12">
       {linkedCards.map((card) => (
         <LinkedCard
-          href={card.href}
+          src={card.href}
           key={card.title}
           className="relative"
           disabled={card.disabled}
