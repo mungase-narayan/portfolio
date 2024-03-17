@@ -27,7 +27,6 @@ const Home = () => {
     <main className="relative overflow-hidden min-h-screen">
       {/* hero */}
       <Section crosses>
-        <LandingPageGridEffect />
         <div className="container sm:w-[90%] mx-auto">
           <UniversAnimation />
           <div className="pb-10 md:pb-0 relative md:p-6 md:mt-10">
