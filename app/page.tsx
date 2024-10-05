@@ -31,7 +31,7 @@ const Home = () => {
           <UniversAnimation />
           <div className="pb-10 md:pb-0 relative md:p-6 md:mt-10">
             <Heading
-              title="Hi, I'am Rushikesh Mungse"
+              title="Hi, I'am Narayan Mungase"
               tag="welcome to my portfolio"
               text="I specialize in creating engaging and user-friendly websites that leave a lasting impression."
               className="mb-6 lg:mb-8"
@@ -88,8 +88,8 @@ const Home = () => {
             <div className="relative">
               <div className="rounded-[50%] h-[300px] w-[300px] overflow-hidden bg-[#682bb3] backdrop-blur-sm z-10">
                 <Image
-                  src={"/assets/rushi-mungse.png"}
-                  alt="rushi-mungse"
+                  src={"/assets/narayan-mungase.png"}
+                  alt="narayan-mungase"
                   height={500}
                   width={500}
                 />

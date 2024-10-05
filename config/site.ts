@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Rushikesh Mungse",
+  name: "Narayan Mungase",
   siteUrl: "",
   links: {
     github: "",
     twitter: "",
     linkedin: "",
-    leetcode: "",
+    leetcode: "https://leetcode.com/u/narayan_mungase/",
   },
 };
